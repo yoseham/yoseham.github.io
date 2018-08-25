@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="数据结构,数组," />
 
 
 
@@ -86,16 +86,18 @@
 
 
 
-<meta name="description" content="tomorrow will be better">
-<meta property="og:type" content="website">
-<meta property="og:title" content="myBlogs">
-<meta property="og:url" content="http://yoursite.com/archives/2018/08/index.html">
+<meta name="description" content="主题：总结vector的二分查找及其应用">
+<meta name="keywords" content="数据结构,数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vector总结(一)">
+<meta property="og:url" content="http://yoursite.com/post/d907480.html">
 <meta property="og:site_name" content="myBlogs">
-<meta property="og:description" content="tomorrow will be better">
+<meta property="og:description" content="主题：总结vector的二分查找及其应用">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-25T13:33:30.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="myBlogs">
-<meta name="twitter:description" content="tomorrow will be better">
+<meta name="twitter:title" content="vector总结(一)">
+<meta name="twitter:description" content="主题：总结vector的二分查找及其应用">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/08/"/>
+  <link rel="canonical" href="http://yoursite.com/post/d907480.html"/>
 
 
 
 
 
-  <title>归档 | myBlogs</title>
+  <title>vector总结(一) | myBlogs</title>
   
 
 
@@ -150,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://github.com/yoseham"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -328,148 +330,285 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/d907480.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoseham">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlogs">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">vector总结(一)</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-25T15:10:56+08:00">
+                2018-08-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/d907480.html" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">vector总结(一)</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  553 字
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-25T15:10:56+08:00"
-              content="2018-08-25" >
-          08-25
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/45babedb.html" itemprop="url">
-              
-                <span itemprop="name">Markdown测试</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-24T20:09:00+08:00"
-              content="2018-08-24" >
-          08-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/4a17b156.html" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-24T12:04:25+08:00"
-              content="2018-08-24" >
-          08-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <blockquote>
+<p>主题：总结vector的二分查找及其应用</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h2 id="接口：二分查找"><a href="#接口：二分查找" class="headerlink" title="  接口：二分查找  "></a><span id="inline-red">  接口：二分查找  </span></h2><h4 id="基础"><a href="#基础" class="headerlink" title=" 基础 "></a><span id="inline-green"> 基础 </span></h4><p>没找到返回-1：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bin_Search</span><span class="params">(<span class="built_in">vector</span> &amp;vec,<span class="keyword">int</span> target)</span></span>&#123;	 </span><br><span class="line">	<span class="keyword">int</span> lo=<span class="number">-1</span>,hi=vec.size();	</span><br><span class="line">	<span class="keyword">while</span>(lo + <span class="number">1</span> != hi)&#123;</span><br><span class="line">		<span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(vec[mi]&lt;target) lo=mi;</span><br><span class="line">		<span class="keyword">else</span> hi=mi;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例题可参考:  <a href="https://www.lintcode.com/problem/classical-binary-search/description" target="_blank" rel="noopener">457. 经典二分查找问题</a></p>
+<h4 id="拓展一"><a href="#拓展一" class="headerlink" title=" 拓展一 "></a><span id="inline-purple"> 拓展一 </span></h4><p> 没有找到返回最大或返回最左边：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bin_Search</span><span class="params">(<span class="built_in">vector</span> &amp;vec,<span class="keyword">int</span> target)</span></span>&#123;	 </span><br><span class="line">	<span class="keyword">int</span> lo=<span class="number">-1</span>,hi=vec.size();	<span class="comment">//若起始位置改变，算法也要变</span></span><br><span class="line">	<span class="keyword">while</span>(lo + <span class="number">1</span> != hi)&#123;</span><br><span class="line">		<span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		A[mi]&lt;target?lo=mi:hi=mi;<span class="comment">//记忆法：相等时左右移		</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//return hi;返回最左边（即可插入处），记忆法：hi的取值范围</span></span><br><span class="line">	<span class="comment">//return lo;返回最大（包含-1），记忆法：lo的取值范围</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例题可参考：</p>
+<p> <a href="https://www.lintcode.com/problem/search-insert-position/description" target="_blank" rel="noopener">60. 搜索插入位置</a></p>
+<p><a href="https://www.lintcode.com/problem/first-position-of-target/description" target="_blank" rel="noopener">14. 二分查找</a> </p>
+<h4 id="拓展二"><a href="#拓展二" class="headerlink" title=" 拓展二 "></a><span id="inline-purple"> 拓展二 </span></h4><p>返回最右边：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bin_Search</span><span class="params">(<span class="built_in">vector</span> &amp;vec,<span class="keyword">int</span> target)</span></span>&#123;	 </span><br><span class="line">	<span class="keyword">int</span> lo=<span class="number">-1</span>,hi=vec.size();	<span class="comment">//若起始位置改变，算法也要变</span></span><br><span class="line">	<span class="keyword">while</span>(lo + <span class="number">1</span> != hi)&#123;</span><br><span class="line">		<span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		A[mi]&lt;=target?lo=mi:hi=mi;<span class="comment">//记忆法：相等时左右移		</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> lo;<span class="comment">//记忆法：lo的取值范围</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例题可参考：</p>
+<p><a href="https://www.lintcode.com/problem/search-for-a-range/description" target="_blank" rel="noopener">61. 搜索区间</a></p>
+<h4 id="进阶"><a href="#进阶" class="headerlink" title=" 进阶 "></a><span id="inline-blue"> 进阶 </span></h4><p>旋转数组<em>（如：45123）</em>：</p>
+<p>例题一：找到最小值</p>
+<p><a href="https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description" target="_blank" rel="noopener">159. 寻找旋转排序数组中的最小值</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bin_Search</span><span class="params">(<span class="built_in">vector</span> &amp;vec)</span></span>&#123;	 </span><br><span class="line">	<span class="keyword">int</span> lo=<span class="number">-1</span>,hi=vec.size()<span class="number">-1</span>;	 <span class="comment">//若起始位置改变，算法也要变</span></span><br><span class="line">	<span class="keyword">while</span>(lo + <span class="number">1</span> != hi)&#123;</span><br><span class="line">		<span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		A[mi]&gt;A[hi]?lo=mi:hi=mi;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> hi;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例题二： 找特定值</p>
+<p><a href="https://www.lintcode.com/problem/search-in-rotated-sorted-array/description" target="_blank" rel="noopener">62. 搜索旋转排序数组</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;A, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// write your code here</span></span><br><span class="line">    <span class="keyword">if</span>(A.size()==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> lo=<span class="number">0</span>,hi=A.size()<span class="number">-1</span>;	 </span><br><span class="line">	<span class="keyword">while</span>(lo &lt;= hi)&#123;</span><br><span class="line">		<span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(A[mi]==target) <span class="keyword">return</span> mi;</span><br><span class="line">        <span class="keyword">if</span>(A[mi]&lt;A[hi])&#123;</span><br><span class="line">            <span class="keyword">if</span>(target&gt;A[mi]&amp;&amp;target&lt;=A[hi]) lo=mi+<span class="number">1</span>;<span class="comment">//位置缩小</span></span><br><span class="line">            <span class="keyword">else</span> hi=mi<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;A[mi]&amp;&amp;target&gt;=A[lo]) hi=mi<span class="number">-1</span>;<span class="comment">//位置缩小</span></span><br><span class="line">            <span class="keyword">else</span> lo=mi+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="总结：二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。"><a href="#总结：二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。" class="headerlink" title="总结：二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。"></a>总结：二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。</h5><p>参考文献：<a href="https://blog.csdn.net/u012879957/article/details/81205567" target="_blank" rel="noopener">二分查找</a></p>
+<p><a href="https://blog.csdn.net/SunnyYoona/article/details/42406497" target="_blank" rel="noopener">二分查找问题汇总</a></p>
 
       
-
     </div>
+    
+    
+    
+	<div>
+	  
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	  
+	</div>
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>发布时间:</span>2018年08月25日 - 15:10:56</p>
+  <p><span>最后更新:</span>2018年08月25日 - 21:33:30</p>
+  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+	</div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Yoseham
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/post/d907480.html" title="vector总结(一)">http://yoursite.com/post/d907480.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+            <a href="/tags/数组/" rel="tag"><i class="fa fa-tag"></i> 数组</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/45babedb.html" rel="next" title="Markdown测试">
+                <i class="fa fa-chevron-left"></i> Markdown测试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -477,6 +616,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTIzNS8xNTc2Mg"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -497,8 +645,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,6 +735,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口：二分查找"><span class="nav-number">1.</span> <span class="nav-text">  接口：二分查找  </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 基础 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展一"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 拓展一 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展二"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 拓展二 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进阶"><span class="nav-number">1.0.4.</span> <span class="nav-text"> 进阶 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结：二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">总结：二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -727,6 +900,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -755,6 +932,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
