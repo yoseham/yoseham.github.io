@@ -2006,7 +2006,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff545c;
+  background: #4bff9a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3204,6 +3204,19 @@ body {
 .post-body p a:hover {
   color: #0477ab;
   text-decoration: underline;
+}
+span#inline-red {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0;
+  background-color: #f00;
 }
 span#inline-yellow {
   display: inline;
