@@ -2006,7 +2006,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3ce575;
+  background: #1361e0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3269,6 +3269,14 @@ span#inline-purple {
   vertical-align: baseline;
   border-radius: 0;
   background-color: #9954bb;
+}
+img {
+  max-width: 97.5%;
+  margin: 15px auto;
+  width: auto;
+  height: auto;
+  max-width: 60%;
+  align: left;
 }
 code {
   color: #ff7600;
