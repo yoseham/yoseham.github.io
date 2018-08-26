@@ -86,18 +86,20 @@
 
 
 
-<meta name="description" content="主题：总结vector的二分查找及其应用">
+<meta name="description" content="主题：总结vector的二分查找及其应用  /search.png)">
 <meta name="keywords" content="数据结构,数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vector总结(一)">
 <meta property="og:url" content="http://yoursite.com/post/d907480.html">
 <meta property="og:site_name" content="myBlogs">
-<meta property="og:description" content="主题：总结vector的二分查找及其应用">
+<meta property="og:description" content="主题：总结vector的二分查找及其应用  /search.png)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-25T14:05:24.246Z">
+<meta property="og:image" content="http://yoursite.com/vertor总结(一">
+<meta property="og:updated_time" content="2018-08-26T01:00:15.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vector总结(一)">
-<meta name="twitter:description" content="主题：总结vector的二分查找及其应用">
+<meta name="twitter:description" content="主题：总结vector的二分查找及其应用  /search.png)">
+<meta name="twitter:image" content="http://yoursite.com/vertor总结(一">
 
 
 
@@ -168,7 +170,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">believe</p>
+        <p class="site-subtitle">knowledge is power</p>
       
   </div>
 
@@ -349,7 +351,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoseham">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -427,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  553 字
+                  654 字
                 </span>
               
 
@@ -467,6 +469,7 @@
         <blockquote>
 <p>主题：总结vector的二分查找及其应用</p>
 </blockquote>
+<p><img src="/vertor总结(一" alt="search">/search.png)</p>
 <a id="more"></a>
 <hr>
 <h2 id="接口：二分查找"><a href="#接口：二分查找" class="headerlink" title="  接口：二分查找  "></a><span id="inline-red">  接口：二分查找  </span></h2><h4 id="基础"><a href="#基础" class="headerlink" title=" 基础 "></a><span id="inline-green"> 基础 </span></h4><p>没找到返回-1：</p>
@@ -489,6 +492,8 @@
 <p><a href="https://www.lintcode.com/problem/search-in-rotated-sorted-array/description" target="_blank" rel="noopener">62. 搜索旋转排序数组</a></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;A, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// write your code here</span></span><br><span class="line">    <span class="keyword">if</span>(A.size()==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> lo=<span class="number">0</span>,hi=A.size()<span class="number">-1</span>;	 </span><br><span class="line">	<span class="keyword">while</span>(lo &lt;= hi)&#123;</span><br><span class="line">		<span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(A[mi]==target) <span class="keyword">return</span> mi;</span><br><span class="line">        <span class="keyword">if</span>(A[mi]&lt;A[hi])&#123;</span><br><span class="line">            <span class="keyword">if</span>(target&gt;A[mi]&amp;&amp;target&lt;=A[hi]) lo=mi+<span class="number">1</span>;<span class="comment">//位置缩小</span></span><br><span class="line">            <span class="keyword">else</span> hi=mi<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;A[mi]&amp;&amp;target&gt;=A[lo]) hi=mi<span class="number">-1</span>;<span class="comment">//位置缩小</span></span><br><span class="line">            <span class="keyword">else</span> lo=mi+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="总结"><a href="#总结" class="headerlink" title=" 总结 "></a><span id="inline-yellow"> 总结 </span></h4><p>二分查找可用于有序或部分有序的数组，其形式多变，需根据初始条件和范围选择合适的形式。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//二分查找的三种形式：</span></span><br><span class="line"><span class="comment">//1.左开右开</span></span><br><span class="line">&#123;</span><br><span class="line">    lo=<span class="number">-1</span>,hi=size();</span><br><span class="line">    <span class="keyword">while</span>(lo + <span class="number">1</span> != hi)&#123;</span><br><span class="line">        ...</span><br><span class="line">        [mi]&lt;target?lo=mi:hi=mi;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2.左闭右开</span></span><br><span class="line">&#123;</span><br><span class="line">    lo=<span class="number">0</span>,hi=size();</span><br><span class="line">    <span class="keyword">while</span>(lo&lt;hi)&#123;</span><br><span class="line">        ...</span><br><span class="line">        [mi]&lt;target?lo=mi+<span class="number">1</span>:hi=mi;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3.左闭右闭</span></span><br><span class="line">&#123;</span><br><span class="line">    lo=<span class="number">0</span>,hi=size()<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span>(lo&lt;=hi)&#123;</span><br><span class="line">            ...</span><br><span class="line">            [mi]&lt;target?lo=mi+<span class="number">1</span>:hi=mi<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-red">  接口：二分查找  </span></p>
 <p>参考文献：<a href="https://blog.csdn.net/u012879957/article/details/81205567" target="_blank" rel="noopener">二分查找</a></p>
 <p><a href="https://blog.csdn.net/SunnyYoona/article/details/42406497" target="_blank" rel="noopener">二分查找问题汇总</a></p>
 
@@ -518,7 +523,7 @@
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
   <p><span>发布时间:</span>2018年08月25日 - 15:10:56</p>
-  <p><span>最后更新:</span>2018年08月25日 - 22:05:24</p>
+  <p><span>最后更新:</span>2018年08月26日 - 09:00:15</p>
   
 </div>
 <script> 
@@ -661,11 +666,11 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/photo.jpg"
+                src="/images/avatar.jpg"
                 alt="Yoseham" />
             
               <p class="site-author-name" itemprop="name">Yoseham</p>
-              <p class="site-description motion-element" itemprop="description">tomorrow will be better</p>
+              <p class="site-description motion-element" itemprop="description">learn and live</p>
           </div>
 
           <nav class="site-state motion-element">
