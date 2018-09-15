@@ -88,19 +88,19 @@
 
 
 
-<meta name="description" content="主题：数组的简单排序方法">
+<meta name="description" content="主题：数组的排序方法">
 <meta name="keywords" content="数据结构,数组,排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vector总结（二）">
 <meta property="og:url" content="http://yoursite.com/post/2ab8ca21.html">
 <meta property="og:site_name" content="yoseham&#39;s blog">
-<meta property="og:description" content="主题：数组的简单排序方法">
+<meta property="og:description" content="主题：数组的排序方法">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/post/2ab8ca21/pg.jpg">
-<meta property="og:updated_time" content="2018-08-27T03:20:07.263Z">
+<meta property="og:updated_time" content="2018-09-15T02:13:51.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vector总结（二）">
-<meta name="twitter:description" content="主题：数组的简单排序方法">
+<meta name="twitter:description" content="主题：数组的排序方法">
 <meta name="twitter:image" content="http://yoursite.com/post/2ab8ca21/pg.jpg">
 
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  755 字
+                  985 字
                 </span>
               
 
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -439,7 +439,7 @@
 
       
         <blockquote>
-<p>主题：数组的简单排序方法</p>
+<p>主题：数组的排序方法</p>
 </blockquote>
 <img src="/post/2ab8ca21/pg.jpg">
 <a id="more"></a>
@@ -453,8 +453,17 @@
 <h3 id="归并排序"><a href="#归并排序" class="headerlink" title=" 归并排序 "></a><span id="inline-red"> 归并排序 </span></h3><p>概念：将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序，是稳定的排序方法。</p>
 <p>代码实现：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; vec,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;=r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">     	<span class="keyword">int</span> mi=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">   		merge_sort(vec,l,mi);</span><br><span class="line">   		merge_sort(vec,mi+<span class="number">1</span>,r);</span><br><span class="line">    	merge(vec,l,mi,r);   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;vec,<span class="keyword">int</span> l,<span class="keyword">int</span> mi,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l1=mi-l+<span class="number">1</span>,l2=r-mi;</span><br><span class="line">    <span class="keyword">int</span> *A=<span class="keyword">new</span> <span class="keyword">int</span>[l1];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l1;i++)</span><br><span class="line">        A[i]=vec[l+i];</span><br><span class="line">    <span class="keyword">int</span> *B=<span class="keyword">new</span> <span class="keyword">int</span>[l2];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l2;i++)</span><br><span class="line">        B[i]=vec[mi+<span class="number">1</span>+i];<span class="comment">//亦可设置哨兵</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>,k=l;i&lt;l1||j&lt;l2;k++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(j==l2||(i&lt;l1&amp;&amp;j&lt;l2&amp;&amp;A[i]&lt;=B[j])) vec[k]=A[i++];</span><br><span class="line">        <span class="keyword">else</span> vec[k]=B[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> []A;</span><br><span class="line">    <span class="keyword">delete</span> []B;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>特点：分治法</p>
+<p>特点：分治法，重在合。</p>
 <p>时间复杂度：O(nlog n)</p>
+<blockquote>
+<p>新增：</p>
+</blockquote>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title=" 快速排序 "></a><span id="inline-red"> 快速排序 </span></h3><p>概念：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序。</p>
+<p>代码实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; vec,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l-r&lt;=<span class="number">1</span>) <span class="keyword">return</span> ;</span><br><span class="line">    <span class="keyword">int</span> mi=partition(vec,l,r);<span class="comment">//查找端点</span></span><br><span class="line">   	quicksort(vec,l,mi);</span><br><span class="line">    quicksott(vec,mi+<span class="number">1</span>,hi);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;vec,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> u=l;</span><br><span class="line">    <span class="keyword">int</span> pivot=vec[u];</span><br><span class="line">    <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;r&amp;&amp;pivot&lt;=vec[r]) r--;</span><br><span class="line">        <span class="keyword">if</span>(l&lt;r) vec[l]=vec[r];	<span class="comment">//找到比端点小的，就放到l处；</span></span><br><span class="line">        <span class="keyword">while</span>(l&lt;r&amp;&amp;vec[l]&lt;=pivot) l++;</span><br><span class="line">        <span class="keyword">if</span>(l&lt;r) vec[r]=vec[l];	<span class="comment">//找到比端点值大的，就放到r处</span></span><br><span class="line">    &#125;</span><br><span class="line">    vec[l]=pivot;</span><br><span class="line">    <span class="keyword">return</span> l;<span class="comment">//返回端点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>特点：分治法，重在分。</p>
+<p>时间复杂度：O(nlog n)</p>
+<hr>
 <h3 id="冒泡排序改进"><a href="#冒泡排序改进" class="headerlink" title=" 冒泡排序改进"></a><span id="inline-red"> 冒泡排序改进</span></h3><p>特点：检测最后的逆序对的位置，减少循环次数，但时间复杂度还是O(n)。</p>
 <p>代码实现：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; vec)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> last,hi;</span><br><span class="line">    hi=vec.size();</span><br><span class="line">    last=<span class="number">0</span>;<span class="comment">//最后的逆序对位置</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;hi;i++)&#123;</span><br><span class="line">     	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;hi;j++)</span><br><span class="line">            <span class="keyword">if</span>(vec[j]&gt;vec[j+<span class="number">1</span>])&#123;</span><br><span class="line">                swap(vec[j],vec[j+<span class="number">1</span>]);</span><br><span class="line">                last=j;</span><br><span class="line">            &#125;</span><br><span class="line">         hi=last;   </span><br><span class="line">    &#125;</span><br><span class="line">    	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -490,7 +499,7 @@
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
   <p><span>发布时间:</span>2018年08月26日 - 18:05:44</p>
-  <p><span>最后更新:</span>2018年08月27日 - 11:20:07</p>
+  <p><span>最后更新:</span>2018年09月15日 - 10:13:51</p>
   
 </div>
 <script> 
@@ -653,7 +662,7 @@
               
                 <a href="../archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -731,7 +740,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">1.</span> <span class="nav-text"> 插入排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-number">2.</span> <span class="nav-text"> 归并排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序改进"><span class="nav-number">3.</span> <span class="nav-text"> 冒泡排序改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序改进"><span class="nav-number">4.</span> <span class="nav-text"> 选择排序改进 </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">1.</span> <span class="nav-text"> 插入排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-number">2.</span> <span class="nav-text"> 归并排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">3.</span> <span class="nav-text"> 快速排序 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序改进"><span class="nav-number">4.</span> <span class="nav-text"> 冒泡排序改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序改进"><span class="nav-number">5.</span> <span class="nav-text"> 选择排序改进 </span></a></li></ol></div>
             
 
           </div>

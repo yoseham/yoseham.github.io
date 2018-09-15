@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-28T09:59:42.962Z</updated>
+  <updated>2018-09-01T07:06:33.002Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html学习总结</title>
+    <link href="http://yoursite.com/post/5be4bf9f.html"/>
+    <id>http://yoursite.com/post/5be4bf9f.html</id>
+    <published>2018-09-01T06:10:23.000Z</published>
+    <updated>2018-09-01T07:06:33.002Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;HTML的常见用法总结：&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>vector总结（三）</title>
@@ -45,12 +63,12 @@
     <link href="http://yoursite.com/post/2ab8ca21.html"/>
     <id>http://yoursite.com/post/2ab8ca21.html</id>
     <published>2018-08-26T10:05:44.000Z</published>
-    <updated>2018-08-27T03:20:07.263Z</updated>
+    <updated>2018-09-15T02:13:51.969Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;主题：数组的简单排序方法&lt;/p&gt;
+&lt;p&gt;主题：数组的排序方法&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;img src=&quot;/post/2ab8ca21/pg.jpg&quot;&gt;
     
