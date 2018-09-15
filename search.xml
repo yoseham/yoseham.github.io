@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[html学习总结]]></title>
     <url>%2Fpost%2F5be4bf9f.html</url>
-    <content type="text"><![CDATA[HTML的常见用法总结： 标题：代码123456&lt;h1&gt;一级标题&lt;/h1&gt;&lt;h2&gt;二级标题&lt;/h2&gt;&lt;h3&gt;三级标题&lt;/h3&gt;&lt;h4&gt;四级标题&lt;/h4&gt;&lt;h5&gt;五级标题&lt;/h5&gt;&lt;h6&gt;六级标题&lt;/h6&gt;效果:一级标题二级标题三级标题四级标题五级标题六级标题 段落： 代码：123&lt;p&gt;这是段落。&lt;/p&gt;&lt;p&gt;会换行。&lt;/p&gt;换行&lt;/br&gt; 效果： 这是段落。 会换行。换行]]></content>
+    <content type="text"><![CDATA[HTML的常见用法总结： 常用标签：123456789&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; 标题：代码123456&lt;h1&gt;一级标题&lt;/h1&gt;&lt;h2&gt;二级标题&lt;/h2&gt;&lt;h3&gt;三级标题&lt;/h3&gt;&lt;h4&gt;四级标题&lt;/h4&gt;&lt;h5&gt;五级标题&lt;/h5&gt;&lt;h6&gt;六级标题&lt;/h6&gt;效果:一级标题二级标题三级标题四级标题五级标题六级标题 段落： 代码：123&lt;p&gt;这是段落。&lt;/p&gt;&lt;p&gt;会换行。&lt;/p&gt;换行&lt;/br&gt; 效果：这是段落。会换行。换行 图片： 代码： 1 &lt;img src="",title="",height="",width="",alt=""&gt; src=””;引号中间接图片地址 title=””;引号中间接标题 height=””;图片的高度 width=””;图片的宽度 alt=””;无法显示图片时 链接 代码 1&lt;a href=""&gt;name&lt;/a&gt; hred=””;引号中间为链接地址 name处为名称 常见作用：跳转，瞄（当href=“#某个标签的id”时，就可以跳转） 表格 代码 12345678 &lt;table&gt; &lt;tr&gt; &lt;th&gt;&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; tr表示行 th表示头标题 td表示格子内容]]></content>
   </entry>
   <entry>
     <title><![CDATA[vector总结（三）]]></title>
