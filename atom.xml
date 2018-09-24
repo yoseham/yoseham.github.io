@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-16T15:10:13.475Z</updated>
+  <updated>2018-09-24T06:10:48.680Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>栈应用——简单计算器的实现</title>
+    <link href="http://yoursite.com/post/4404c848.html"/>
+    <id>http://yoursite.com/post/4404c848.html</id>
+    <published>2018-09-24T04:41:01.000Z</published>
+    <updated>2018-09-24T06:10:48.680Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;用栈实现一个简单的计算器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/post/undefined/calc.jpg&quot; title=&quot;图片&quot;&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="栈" scheme="http://yoursite.com/tags/%E6%A0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>html学习总结</title>
